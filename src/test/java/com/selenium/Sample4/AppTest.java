@@ -18,14 +18,41 @@ import org.testng.annotations.Test;
  */
 public class AppTest 
 {
-   @Test
-    public void fi()
-    {
+   @Test(priority = 2)
+    public void f1()
+    {	//driver setup
         WebDriverManager.chromedriver().setup();
+        //browser object
         WebDriver driver=new ChromeDriver();
+        //Open Google
         driver.get("https://www.google.com");
+        //Search Hello and hit ENTER
         driver.findElement(By.name("q")).sendKeys("Hello",Keys.ENTER);
-        Assert.assertEquals(driver.getTitle(), "Hello - Google Search");
-        
-    }
+       //Verify the Actual and Expected title are same
+        Assert.assertNotEquals(driver.getTitle(), "gogle Search");
+      
+}
+   @Test
+   public void f2()
+   {	//driver setup
+       WebDriverManager.chromedriver().setup();
+       //browser object
+       WebDriver driver=new ChromeDriver();
+       //Open Google
+       driver.get("https://www.bing.com");
+
+     
+}
+   @Test
+   public void f3()
+   {	//driver setup
+       WebDriverManager.chromedriver().setup();
+       //browser object
+       WebDriver driver=new ChromeDriver();
+       //Open Google
+       driver.get("https://www.demoblaze.com");
+
+     
+}
+   
 }

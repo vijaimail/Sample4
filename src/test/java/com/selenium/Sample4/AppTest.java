@@ -29,7 +29,7 @@ public class AppTest
         //Search Hello and hit ENTER
         driver.findElement(By.name("q")).sendKeys("Hello",Keys.ENTER);
        //Verify the Actual and Expected title are same
-        Assert.assertNotEquals(driver.getTitle(), "gogle Search");
+        Assert.assertNotEquals(driver.getTitle(), "gogle vs Search");
       
 }
    @Test
